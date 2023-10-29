@@ -7,10 +7,10 @@ terraform {
   }
 }
 
-# resource "digitalocean_ssh_key" "pernonal_use" {
-# name       = "SSH_KEY"
-# public_key = file("./.ssh/id_rsa.pub")
-# }
+resource "digitalocean_ssh_key" "pernonal_use" {
+  name       = "SSH_KEY"
+  public_key = file("./.ssh/id_rsa.pub")
+}
 
 provider "digitalocean" {
   token = ""
